@@ -1,40 +1,335 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
 
-		<title>reveal.js</title>
+    <title>ACS 2021</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+    <meta name="description" content="CEDSCI presentation for ACS 2021" />
+    <meta name="author" content="Zach Whitman" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <link rel="icon" href="dist/assets/favicon.ico" />
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/cedsci.css" id="theme" />
+
+    <!-- #102d51 -->
+    <!-- Theme used for syntax highlighting of code -->
+    <link
+      rel="stylesheet"
+      href="plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <section>
+            <h1>CEDSCI</h1>
+            <p>Zach Whitman</p>
+          </section>
+          <section>
+            <h3>Quick CEDSCI overview</h3>
+          </section>
+          <section>
+            <h3>We're an enterprise program that focuses on dissemination.</h3>
+          </section>
+          <section>
+            <h3>We're responsible for disseminating Census Bureau data.</h3>
+          </section>
+          <section>
+            <h3>We're building two product lines:</h3>
+          </section>
+          <section>
+            <h3>1. Data/metadata API services</h3>
+          </section>
+          <section>
+            <pre><code data-line-numbers="3|7-11|13|16">{
+ @context: "https://project-open-data.cio.gov/v1.1/schema/catalog.jsonld",
+ @id: "https://api.census.gov/data/1999/nonemp.json",
+ @type: "dcat:Catalog",
+ conformsTo: "https://project-open-data.cio.gov/v1.1/schema",
+ describedBy: "https://project-open-data.cio.gov/v1.1/schema/catalog.json",
+ dataset: [{
+	c_vintage: 1999,
+	c_dataset: ["nonemp"],
+	c_geographyLink: "https://api.census.gov/data/1999/nonemp/geography.json",
+	c_variablesLink: "https://api.census.gov/data/1999/nonemp/variables.json",
+	c_tagsLink: "https://api.census.gov/data/1999/nonemp/tags.json",
+	c_examplesLink: "https://api.census.gov/data/1999/nonemp/examples.json",
+	c_groupsLink: "https://api.census.gov/data/1999/nonemp/groups.json",
+	c_valuesLink: "https://api.census.gov/data/1999/nonemp/values.json",
+	c_documentationLink: "http://www.census.gov/developer/",
+  ...,
+ ]}
+}
+						</code></pre>
+          </section>
+          <section>
+            <h3>2. Data dissemination applications</h3>
+          </section>
+          <section>
+            <h3>
+              <a href="https://data.census.gov/cedsci" target="_blank"
+                >data.census.gov</a
+              >
+              and
+              <a href="https://data.census.gov/mdat/#/" target="_blank">mdat</a>
+              are just the start
+            </h3>
+          </section>
+        </section>
+        <section>
+          <section data-auto-animate>
+            <h3>Where we began</h3>
+          </section>
+          <section data-auto-animate data-transition="fade">
+            <img
+              src="dist/assets/current.png"
+              alt="chart image"
+              style="height: 580px; margin: 0 auto 4rem auto; background: transparent;"
+              class="demo-logo"
+            />
+          </section>
+          <section data-transition="fade">
+            <img
+              src="dist/assets/current-update.png"
+              alt="chart image"
+              style="height: 580px; margin: 0 auto 4rem auto; background: transparent;"
+              class="demo-logo"
+            />
+          </section>
+          <section data-auto-animate>
+            <h3>Where we are</h3>
+          </section>
+          <section data-auto-animate data-transition="fade">
+            <img
+              src="dist/assets/current-cedsci.png"
+              alt="chart image"
+              style="height: 580px; margin: 0 auto 4rem auto; background: transparent;"
+              class="demo-logo"
+            />
+          </section>
+          <section data-auto-animate>
+            <h3>Where we're going</h3>
+          </section>
+          <section data-auto-animate data-transition="none">
+            <img
+              src="dist/assets/future.png"
+              alt="chart image"
+              style="height: 580px; margin: 0 auto 4rem auto; background: transparent;"
+              class="demo-logo"
+            />
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>Why are we doing this?</h3>
+          </section>
+          <section>
+            <h3>
+              Centralized data access
+            </h3>
+          </section>
+          <section>
+            <h3>Standardized user interactions</h3>
+          </section>
+          <section>
+            <h3>Consolidated business logic</h3>
+          </section>
+          <section>
+            <h3>But the main driver is to be responsive to our users</h3>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>How are we approaching this?</h3>
+          </section>
+          <section>
+            <h3>Minimize one-off deliveries and duplicative ETL</h3>
+          </section>
+          <section>
+            <h3>Drive all data via API services</h3>
+          </section>
+          <section>
+            <h3>Consolidate UI components</h3>
+          </section>
+          <section>
+            <h3>Build applications through templates</h3>
+          </section>
+          <section>
+            <img
+              src="dist/assets/edde-engine.png"
+              alt="chart image"
+              style="height: 580px; margin: 0 auto 4rem auto; background: transparent;"
+              class="demo-logo"
+            />
+          </section>
+          <section>
+            <iframe
+              src="https://data.census.gov/cedsci/vizwidget?g=0400000US36&infoSection=Foreign%20Born&type=map"
+              width="60%"
+              height="350px"
+              style="border:0"
+            ></iframe>
+          </section>
+          <section>
+            <iframe
+              src="https://data.census.gov/cedsci/vizwidget?g=0400000US36&infoSection=Language%20Spoken%20at%20Home&type=chart&chartType=bar"
+              width="60%"
+              height="360px"
+              style="border:0"
+            ></iframe>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>Our process</h3>
+          </section>
+          <section>
+            <h3>We've moving expertise upstream</h3>
+          </section>
+          <section>
+            <h3>That means we're no longer creating content</h3>
+          </section>
+          <section>
+            <h3>The pros are data consistency, assurance, and reliablity</h3>
+          </section>
+          <section>
+            <h3>The cons are it takes greater coordination and it's slower</h3>
+          </section>
+          <section>
+            <h3>Example: pseudogeos</h3>
+            <img
+              src="dist/assets/pseudos.png"
+              alt="chart image"
+              style="height: 280px; margin: 0 auto 4rem auto; background: transparent;"
+              class="demo-logo"
+            />
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>What we've seen</h3>
+          </section>
+          <section>
+            <img
+              src="dist/assets/page-views.png"
+              alt="chart image"
+              style="margin: 0 auto 4rem auto; background: transparent;"
+              class="demo-logo"
+            />
+          </section>
+          <section>
+            <img
+              src="dist/assets/time-user.png"
+              alt="chart image"
+              style="margin: 0 auto 4rem auto; background: transparent;"
+              class="demo-logo"
+            />
+          </section>
+          <section>
+            <h3>What we've heard</h3>
+          </section>
+          <section>
+            <img
+              src="dist/assets/feedback-tot.png"
+              alt="chart image"
+              style="margin: 0 auto 4rem auto; background: transparent;"
+              class="demo-logo"
+            />
+          </section>
+          <section>
+            <img
+              src="dist/assets/feedback-type.png"
+              alt="chart image"
+              style="margin: 0 auto 4rem auto; background: transparent;"
+              class="demo-logo"
+            />
+          </section>
+          <section>
+            <img
+              src="dist/assets/feedback-cat.png"
+              alt="chart image"
+              style="margin: 0 auto 4rem auto; background: transparent;"
+              class="demo-logo"
+            />
+          </section>
+          <section>
+            <h3>What we've understood</h3>
+          </section>
+          <section>
+            <h3>
+              We need to focus on the usability - particularly for faceted
+              filtering
+            </h3>
+          </section>
+          <section>
+            <h3>
+              We need better exports
+            </h3>
+          </section>
+          <section>
+            <h3>
+              We need to improve search
+            </h3>
+          </section>
+        </section>
+
+        <section data-background-iframe="https://data.census.gov/cedsci">
+          <div
+            class="fragment fade-out"
+            style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;"
+          >
+            <h2>
+              <a href="https://data.census.gov/cedsci" target="_blank"
+                >Demo time</a
+              >
+            </h2>
+            <p>
+              If there's time
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/search/search.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // Also available as an ES module, see:
+      // https://revealjs.com/initialization/
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [
+          RevealZoom,
+          RevealNotes,
+          RevealSearch,
+          RevealMarkdown,
+          RevealHighlight,
+        ],
+      });
+    </script>
+  </body>
 </html>
