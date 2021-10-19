@@ -1,4 +1,4 @@
-# CEDSCI deck for ACS 2021 User Conference
+# CEDSCI deck for FCSM 2021
 
 ## Zach Whitman
 
